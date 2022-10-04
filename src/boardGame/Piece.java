@@ -10,6 +10,4 @@ public Piece(Board board) {
 protected Board getBoard() {
 	return board;
 }
-
-
 }
