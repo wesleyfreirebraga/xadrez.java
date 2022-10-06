@@ -20,8 +20,11 @@ public ChessPiece[][] getPieces(){
 	}
 	return mat;
 }
+private void placeNewPiece(char column, int row, ChessPiece piece) {
+	board.placaePieces(piece,new ChessPosition(column,row).toPosition());
+}
 private void initialSetup() {
-	board.placaePieces(new Rook(board,Color.WHITE), new Position(2,1));
-	board.placaePieces(new King(board,Color.BLACK), new Position(0,4));
+	placeNewPiece('b',6,new Rook(board,Color.WHITE));
+	placeNewPiece('e',8,new King (board,Color.BLACK));
 }
 }
